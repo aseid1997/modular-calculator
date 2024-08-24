@@ -1,13 +1,83 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.plugin-manager {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.plugin-manager.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.plugin-manager.dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.plugin-area {
+  margin-top: 20px;
+}
+
+.arithmetic-plugin .display,
+.programming-plugin input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: right;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.arithmetic-plugin .buttons,
+.theme-plugin {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.arithmetic-plugin .buttons button,
+.theme-plugin button {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.arithmetic-plugin .buttons button:hover,
+.theme-plugin button:hover {
+  background-color: #ddd;
+}
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.plugin-manager.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.plugin-manager.dark {
+  background-color: #333;
+  color: #fff;
 }
